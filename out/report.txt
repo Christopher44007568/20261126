@@ -1,0 +1,23 @@
+=== Forest BLAS compression report ===
+BLAS count: 221 (1 ground + 220 trees), triangles: 14352, BVH nodes: 7587
+[before] node memory: 303480 B (7587 x 40B), index memory: 57408 B (14352 x 4B), total: 360888 B
+[after]  node memory: 126696 B (7587 x 16B + grid), index memory: 0 B (triangles reordered), total: 126696 B
+saved: 64.9% of node+index memory
+validation: 0 invalid references across all compressed BLAS
+corruption self-test: injected 2 faults, checker caught 10
+beauty 480x360: max|diff|=0 (x20 amplified in diff.ppm), triangle-ID mismatches=0, invalid-ref pixels=0
+invalid highlight demo: 50 pixels flagged red in invalid_demo.ppm
+camera path: 12 frames 288x216
+  frame 00: compressed-vs-uncompressed mismatches=0, temporal ID changes=0 (0.0%)
+  frame 01: compressed-vs-uncompressed mismatches=0, temporal ID changes=29773 (47.9%)
+  frame 02: compressed-vs-uncompressed mismatches=0, temporal ID changes=29689 (47.7%)
+  frame 03: compressed-vs-uncompressed mismatches=0, temporal ID changes=29721 (47.8%)
+  frame 04: compressed-vs-uncompressed mismatches=0, temporal ID changes=29753 (47.8%)
+  frame 05: compressed-vs-uncompressed mismatches=0, temporal ID changes=29848 (48.0%)
+  frame 06: compressed-vs-uncompressed mismatches=0, temporal ID changes=30061 (48.3%)
+  frame 07: compressed-vs-uncompressed mismatches=0, temporal ID changes=30264 (48.6%)
+  frame 08: compressed-vs-uncompressed mismatches=0, temporal ID changes=30127 (48.4%)
+  frame 09: compressed-vs-uncompressed mismatches=0, temporal ID changes=30016 (48.3%)
+  frame 10: compressed-vs-uncompressed mismatches=0, temporal ID changes=30080 (48.4%)
+  frame 11: compressed-vs-uncompressed mismatches=0, temporal ID changes=29461 (47.4%)
+flicker check: PASS - every frame bit-identical, compression introduces zero flicker
