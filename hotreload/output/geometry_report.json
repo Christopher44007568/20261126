@@ -1,0 +1,91 @@
+{
+  "ok": true,
+  "operation": "replace-geometry",
+  "target": "geo.layer",
+  "revision": 2,
+  "changed_edges": [
+    {
+      "from": "material",
+      "to": "surface",
+      "kind": "material",
+      "change": "detached-from-new-geometry:mat.stripes"
+    },
+    {
+      "from": "geo.asset",
+      "to": "geo.layer",
+      "kind": "geometry-asset",
+      "change": "geometry-replaced"
+    },
+    {
+      "from": "geo.layer",
+      "to": "surface",
+      "kind": "geometry",
+      "change": "geometry-cache-invalidated"
+    },
+    {
+      "from": "geo.layer",
+      "to": "outline",
+      "kind": "outline",
+      "change": "outline-refreshed"
+    },
+    {
+      "from": "geo.layer",
+      "to": "composite",
+      "kind": "composite",
+      "change": "composite-refreshed"
+    },
+    {
+      "from": "surface",
+      "to": "composite",
+      "kind": "composite",
+      "change": "composite-refreshed"
+    },
+    {
+      "from": "outline",
+      "to": "composite",
+      "kind": "composite",
+      "change": "composite-refreshed"
+    }
+  ],
+  "recomputed_nodes": [
+    "geo.layer",
+    "surface",
+    "outline",
+    "composite"
+  ],
+  "cache_hits": [
+    "background",
+    "rgb.layer",
+    "rgb.grade"
+  ],
+  "cache_retained": [
+    "background",
+    "rgb.layer",
+    "rgb.grade"
+  ],
+  "cache_invalidated": [
+    "geo.layer",
+    "surface",
+    "outline",
+    "composite"
+  ],
+  "detached_materials": [
+    "mat.stripes"
+  ],
+  "bound_materials": [
+    "mat.check-amber"
+  ],
+  "diff": {
+    "changed_pixels": 30485,
+    "total_pixels": 144000,
+    "percent": 21.17013888888889,
+    "bounds": {
+      "min_x": 260,
+      "min_y": 62,
+      "max_x": 451,
+      "max_y": 242,
+      "valid": true
+    },
+    "threshold": 28
+  }
+}

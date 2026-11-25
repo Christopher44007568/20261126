@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "operation": "reload-rgb",
+  "target": "rgb.layer",
+  "revision": 2,
+  "changed_edges": [
+    {
+      "from": "rgb.payload",
+      "to": "rgb.layer",
+      "kind": "rgb-payload",
+      "change": "payload-reloaded"
+    },
+    {
+      "from": "rgb.layer",
+      "to": "rgb.grade",
+      "kind": "rgb-process",
+      "change": "rgb-subtree-refreshed"
+    },
+    {
+      "from": "rgb.grade",
+      "to": "composite",
+      "kind": "composite",
+      "change": "composite-refreshed"
+    }
+  ],
+  "recomputed_nodes": [
+    "rgb.layer",
+    "rgb.grade",
+    "composite"
+  ],
+  "cache_hits": [
+    "background",
+    "geo.layer",
+    "surface",
+    "outline"
+  ],
+  "cache_retained": [
+    "background",
+    "geo.layer",
+    "surface",
+    "outline"
+  ],
+  "cache_invalidated": [
+    "rgb.layer",
+    "rgb.grade",
+    "composite"
+  ],
+  "diff": {
+    "changed_pixels": 36036,
+    "total_pixels": 144000,
+    "percent": 25.025,
+    "bounds": {
+      "min_x": 31,
+      "min_y": 61,
+      "max_x": 228,
+      "max_y": 242,
+      "valid": true
+    },
+    "threshold": 28
+  }
+}

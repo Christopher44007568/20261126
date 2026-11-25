@@ -1,0 +1,68 @@
+{
+  "ok": false,
+  "operation": "reload-rgb",
+  "target": "rgb.layer",
+  "revision": 2,
+  "changed_edges": [
+    {
+      "from": "rgb.payload",
+      "to": "rgb.layer",
+      "kind": "rgb-payload",
+      "change": "payload-reloaded"
+    },
+    {
+      "from": "rgb.layer",
+      "to": "rgb.grade",
+      "kind": "rgb-process",
+      "change": "rgb-subtree-refreshed"
+    },
+    {
+      "from": "rgb.grade",
+      "to": "composite",
+      "kind": "composite",
+      "change": "composite-refreshed"
+    }
+  ],
+  "recomputed_nodes": [
+    "rgb.layer",
+    "rgb.grade",
+    "composite"
+  ],
+  "cache_hits": [
+    "background",
+    "geo.layer",
+    "surface",
+    "outline"
+  ],
+  "cache_retained": [
+    "background",
+    "geo.layer",
+    "surface",
+    "outline"
+  ],
+  "cache_invalidated": [
+    "rgb.layer",
+    "rgb.grade",
+    "composite"
+  ],
+  "errors": [
+    {
+      "node_id": "rgb.layer",
+      "code": "invalid-rgb-buffer",
+      "message": "RGBA payload length 17, want 16384"
+    }
+  ],
+  "diff": {
+    "changed_pixels": 36800,
+    "total_pixels": 144000,
+    "percent": 25.555555555555557,
+    "bounds": {
+      "min_x": 30,
+      "min_y": 60,
+      "max_x": 229,
+      "max_y": 243,
+      "valid": true
+    },
+    "threshold": 28
+  }
+}
