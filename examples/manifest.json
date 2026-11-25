@@ -1,0 +1,140 @@
+{
+  "title": "LOCAL COLOR GATE",
+  "canvas": {
+    "width": 720,
+    "height": 540
+  },
+  "output": {
+    "amplification": 10
+  },
+  "thresholds": {
+    "deltaE": 2.2,
+    "brightness": 3.5,
+    "highlightDeltaE": 1.5,
+    "highlightBrightness": 2.5,
+    "skinDeltaE": 2.5,
+    "skinBrightness": 3.5,
+    "clipRatio": 0.01,
+    "highlightClipRatio": 0.005,
+    "monotonicityDeltaL": 0.4,
+    "clipHigh": 254,
+    "clipLow": 1
+  },
+  "groups": [
+    {
+      "id": "neutral-ramp",
+      "name": "NEUTRAL RAMP",
+      "direction": "increasing"
+    }
+  ],
+  "patches": [
+    {
+      "id": "SKIN-01",
+      "label": "SKIN LIGHT",
+      "kind": "skin",
+      "rect": {"x": 30, "y": 24, "w": 156, "h": 156},
+      "order": 0,
+      "source": "#D49A82",
+      "target": "#D59B84"
+    },
+    {
+      "id": "SKIN-02",
+      "label": "SKIN MID",
+      "kind": "skin",
+      "rect": {"x": 198, "y": 24, "w": 156, "h": 156},
+      "order": 1,
+      "source": "#C98B73",
+      "target": "#CD9079"
+    },
+    {
+      "id": "SKIN-03",
+      "label": "SKIN SHADOW",
+      "kind": "skin",
+      "rect": {"x": 366, "y": 24, "w": 156, "h": 156},
+      "order": 2,
+      "source": "#B97B63",
+      "target": "#C88870"
+    },
+    {
+      "id": "HL-01",
+      "label": "HIGHLIGHT",
+      "kind": "highlight",
+      "rect": {"x": 534, "y": 24, "w": 156, "h": 156},
+      "order": 3,
+      "source": "#EDE2D2",
+      "target": "#FFE8CE"
+    },
+    {
+      "id": "N-01",
+      "label": "NEUTRAL 1",
+      "kind": "patch",
+      "group": "neutral-ramp",
+      "rect": {"x": 30, "y": 200, "w": 156, "h": 156},
+      "order": 0,
+      "source": "#747474",
+      "target": "#797979"
+    },
+    {
+      "id": "N-02",
+      "label": "NEUTRAL 2",
+      "kind": "patch",
+      "group": "neutral-ramp",
+      "rect": {"x": 198, "y": 200, "w": 156, "h": 156},
+      "order": 1,
+      "source": "#777777",
+      "target": "#777777"
+    },
+    {
+      "id": "N-03",
+      "label": "NEUTRAL 3",
+      "kind": "patch",
+      "group": "neutral-ramp",
+      "rect": {"x": 366, "y": 200, "w": 156, "h": 156},
+      "order": 2,
+      "source": "#7A7A7A",
+      "target": "#7F7F7F"
+    },
+    {
+      "id": "N-04",
+      "label": "NEUTRAL 4",
+      "kind": "patch",
+      "group": "neutral-ramp",
+      "rect": {"x": 534, "y": 200, "w": 156, "h": 156},
+      "order": 3,
+      "source": "#7D7D7D",
+      "target": "#828282"
+    },
+    {
+      "id": "RED-01",
+      "label": "RED",
+      "kind": "patch",
+      "rect": {"x": 30, "y": 376, "w": 156, "h": 156},
+      "source": "#C34848",
+      "target": "#C94C4C"
+    },
+    {
+      "id": "GRN-01",
+      "label": "GREEN",
+      "kind": "patch",
+      "rect": {"x": 198, "y": 376, "w": 156, "h": 156},
+      "source": "#2E8B57",
+      "target": "#33905C"
+    },
+    {
+      "id": "CYN-01",
+      "label": "CYAN",
+      "kind": "patch",
+      "rect": {"x": 366, "y": 376, "w": 156, "h": 156},
+      "source": "#2A8FA5",
+      "target": "#3094AA"
+    },
+    {
+      "id": "GRAY-01",
+      "label": "WARM GRAY",
+      "kind": "patch",
+      "rect": {"x": 534, "y": 376, "w": 156, "h": 156},
+      "source": "#8C7A66",
+      "target": "#907E6A"
+    }
+  ]
+}
