@@ -1,0 +1,24 @@
+{
+  "fast_turn_frame": 21,
+  "frames": 30,
+  "global_crop_2d": {
+    "X0": 51,
+    "Y0": 28,
+    "X1": 430,
+    "Y1": 334
+  },
+  "global_crop_3d": {
+    "X0": 61,
+    "Y0": 43,
+    "X1": 372,
+    "Y1": 323
+  },
+  "mean": {
+    "bound3d_wav_rmse_px": 3.690761367480832,
+    "hole_2d_pct": 8.532291666666667,
+    "hole_3d_pct": 9.546855709876546,
+    "jelly_2d_rmse_px": 1.8108849695280764,
+    "jelly_3d_rmse_px": 1.5636867516746107e-12,
+    "jelly_none_rmse_px": 1.8108849695280764
+  }
+}
