@@ -1,0 +1,25 @@
+Synthetic AWB comparison
+Frames: 0-9 sunset, 10-13 transition, 14-23 fluorescent, 24-27 transition, 28-39 shadow
+Neutral RMSE is measured on four fixed gray patches in linear RGB.
+
+gray_world
+  frames 00-09: last_rmse=0.00229 max_gain_step=0.00000 last_gains=(0.42378,1,4.24568)
+  frames 14-14: last_rmse=0.00022 max_gain_step=0.00000 last_gains=(2.49530,1,6.05553)
+  frames 15-23: last_rmse=0.00022 max_gain_step=0.00000 last_gains=(2.49530,1,6.05553)
+  frames 28-28: last_rmse=0.00011 max_gain_step=0.00000 last_gains=(1.01667,1,0.84213)
+  frames 29-39: last_rmse=0.00011 max_gain_step=0.00000 last_gains=(1.01667,1,0.84213)
+
+white_point
+  frames 00-09: last_rmse=0.00724 max_gain_step=0.00000 last_gains=(0.42581,1,4.43626)
+  frames 14-14: last_rmse=0.01189 max_gain_step=0.00000 last_gains=(2.48040,1,6.32736)
+  frames 15-23: last_rmse=0.01189 max_gain_step=0.00000 last_gains=(2.48040,1,6.32736)
+  frames 28-28: last_rmse=0.00804 max_gain_step=0.00000 last_gains=(1.01060,1,0.87993)
+  frames 29-39: last_rmse=0.00804 max_gain_step=0.00000 last_gains=(1.01060,1,0.87993)
+
+temporal_smooth
+  frames 00-09: last_rmse=0.00229 max_gain_step=0.00000 last_gains=(0.42378,1,4.24568)
+  frames 14-14: last_rmse=0.13825 max_gain_step=0.00000 last_gains=(1.38125,1,5.50773)
+  frames 15-23: last_rmse=0.00022 max_gain_step=0.00000 last_gains=(2.49530,1,6.05553)
+  frames 28-28: last_rmse=0.11847 max_gain_step=0.00000 last_gains=(1.39455,1,1.53100)
+  frames 29-39: last_rmse=0.00011 max_gain_step=0.00000 last_gains=(1.01667,1,0.84213)
+
