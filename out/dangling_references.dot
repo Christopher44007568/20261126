@@ -1,0 +1,51 @@
+digraph acceleration_structure_references {
+  rankdir=LR;
+  graph [label="generation refs and retirement queue; dangling refs=0", labelloc=t, fontname="monospace"];
+  node [fontname="monospace", fontsize=10];
+  edge [fontname="monospace", fontsize=8];
+  subgraph cluster_queries { label="light-path query refs"; color="#2a3b5c";
+    "F1-A" [shape=box, label="F1-A\\nG1 ref t0..t3"];
+    "F1-B" [shape=box, label="F1-B\\nG1 ref t0..t4"];
+    "F2-A" [shape=box, label="F2-A\\nG2 ref t1..t4"];
+    "F2-B" [shape=box, label="F2-B\\nG2 ref t1..t5"];
+    "F3-A" [shape=box, label="F3-A\\nG3 ref t4..t6"];
+    "F3-B" [shape=box, label="F3-B\\nG3 ref t4..t7"];
+  }
+  subgraph cluster_generations { label="resource generations"; color="#2a3b5c";
+    "G1" [shape=box, style="rounded,filled", fillcolor="#101a30", color="#f27e36", label="G1 frame 1\\nbuild t0 retire t1\\nrelease t4 last-ref t4"];
+    "G2" [shape=box, style="rounded,filled", fillcolor="#101a30", color="#2ac3d0", label="G2 frame 2\\nbuild t1 retire t3\\nrelease t5 last-ref t5"];
+    "G3" [shape=box, style="rounded,filled", fillcolor="#101a30", color="#ca5cd6", label="G3 frame 3\\nbuild t4 retire t8\\nrelease t8 last-ref t7"];
+  }
+  subgraph cluster_slots { label="shared slots"; color="#2a3b5c";
+    "S0" [shape=box, label="slot 0"];
+    "S1" [shape=box, label="slot 1"];
+    "S2" [shape=box, label="slot 2"];
+    "S3" [shape=box, label="slot 3"];
+    "S4" [shape=box, label="slot 4"];
+    "S5" [shape=box, label="slot 5"];
+    "S6" [shape=box, label="slot 6"];
+    "S7" [shape=box, label="slot 7"];
+  }
+  "F1-A" -> "G1" [color="#f27e36", label="done t3"];
+  "F1-B" -> "G1" [color="#f27e36", label="done t4"];
+  "F2-A" -> "G2" [color="#2ac3d0", label="done t4"];
+  "F2-B" -> "G2" [color="#2ac3d0", label="done t5"];
+  "F3-A" -> "G3" [color="#ca5cd6", label="done t6"];
+  "F3-B" -> "G3" [color="#ca5cd6", label="done t7"];
+  "G1" -> "S0" [style=dashed, color="#f27e36", label="released t4"];
+  "G1" -> "S1" [style=dashed, color="#f27e36", label="released t4"];
+  "G1" -> "S2" [style=dashed, color="#f27e36", label="released t4"];
+  "G1" -> "S3" [style=dashed, color="#f27e36", label="released t4"];
+  "G2" -> "S4" [style=dashed, color="#2ac3d0", label="released t5"];
+  "G2" -> "S5" [style=dashed, color="#2ac3d0", label="released t5"];
+  "G2" -> "S6" [style=dashed, color="#2ac3d0", label="released t5"];
+  "G2" -> "S7" [style=dashed, color="#2ac3d0", label="released t5"];
+  "G3" -> "S0" [style=dashed, color="#ca5cd6", label="released t8"];
+  "G3" -> "S1" [style=dashed, color="#ca5cd6", label="released t8"];
+  "G3" -> "S2" [style=dashed, color="#ca5cd6", label="released t8"];
+  "G3" -> "S3" [style=dashed, color="#ca5cd6", label="released t8"];
+  "G1" -> "G3" [style=dotted, color="#ffd748", label="reuse S0 t4>=t4"];
+  "G1" -> "G3" [style=dotted, color="#ffd748", label="reuse S1 t4>=t4"];
+  "G1" -> "G3" [style=dotted, color="#ffd748", label="reuse S2 t4>=t4"];
+  "G1" -> "G3" [style=dotted, color="#ffd748", label="reuse S3 t4>=t4"];
+}

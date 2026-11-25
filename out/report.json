@@ -1,0 +1,531 @@
+{
+  "policy": "generation-tagged slots + per-query references + retirement queue",
+  "width": 480,
+  "height": 270,
+  "frames": [
+    {
+      "frame": 1,
+      "name": "FRAME 1",
+      "complete_tick": 4,
+      "width": 480,
+      "height": 270,
+      "ghost_pixels": 0,
+      "queries": [
+        "F1-A",
+        "F1-B"
+      ]
+    },
+    {
+      "frame": 2,
+      "name": "FRAME 2",
+      "complete_tick": 5,
+      "width": 480,
+      "height": 270,
+      "ghost_pixels": 0,
+      "queries": [
+        "F2-A",
+        "F2-B"
+      ]
+    },
+    {
+      "frame": 3,
+      "name": "FRAME 3",
+      "complete_tick": 7,
+      "width": 480,
+      "height": 270,
+      "ghost_pixels": 0,
+      "queries": [
+        "F3-A",
+        "F3-B"
+      ]
+    }
+  ],
+  "generations": [
+    {
+      "id": 1,
+      "frame": 1,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "build_requested_at": 0,
+      "build_attempts_at": [
+        0
+      ],
+      "built_at": 0,
+      "retired_at": 1,
+      "released_at": 4,
+      "last_ref_done_at": 4,
+      "refs_issued": 2
+    },
+    {
+      "id": 2,
+      "frame": 2,
+      "slots": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "build_requested_at": 1,
+      "build_attempts_at": [
+        1
+      ],
+      "built_at": 1,
+      "retired_at": 3,
+      "released_at": 5,
+      "last_ref_done_at": 5,
+      "refs_issued": 2
+    },
+    {
+      "id": 3,
+      "frame": 3,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "build_requested_at": 3,
+      "build_attempts_at": [
+        3,
+        4
+      ],
+      "built_at": 4,
+      "retired_at": 8,
+      "released_at": 8,
+      "last_ref_done_at": 7,
+      "refs_issued": 2
+    }
+  ],
+  "slots": [
+    {
+      "index": 0,
+      "generation": 3,
+      "allocated_at": 4,
+      "freed_at": 8,
+      "reuse_count": 2,
+      "last_owner": 3
+    },
+    {
+      "index": 1,
+      "generation": 3,
+      "allocated_at": 4,
+      "freed_at": 8,
+      "reuse_count": 2,
+      "last_owner": 3
+    },
+    {
+      "index": 2,
+      "generation": 3,
+      "allocated_at": 4,
+      "freed_at": 8,
+      "reuse_count": 2,
+      "last_owner": 3
+    },
+    {
+      "index": 3,
+      "generation": 3,
+      "allocated_at": 4,
+      "freed_at": 8,
+      "reuse_count": 2,
+      "last_owner": 3
+    },
+    {
+      "index": 4,
+      "generation": 2,
+      "allocated_at": 1,
+      "freed_at": 5,
+      "reuse_count": 1,
+      "last_owner": 2
+    },
+    {
+      "index": 5,
+      "generation": 2,
+      "allocated_at": 1,
+      "freed_at": 5,
+      "reuse_count": 1,
+      "last_owner": 2
+    },
+    {
+      "index": 6,
+      "generation": 2,
+      "allocated_at": 1,
+      "freed_at": 5,
+      "reuse_count": 1,
+      "last_owner": 2
+    },
+    {
+      "index": 7,
+      "generation": 2,
+      "allocated_at": 1,
+      "freed_at": 5,
+      "reuse_count": 1,
+      "last_owner": 2
+    }
+  ],
+  "queries": [
+    {
+      "id": "F1-A",
+      "frame": 1,
+      "sequence": "A",
+      "generation": 1,
+      "start_tick": 0,
+      "done_tick": 3,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "F1-B",
+      "frame": 1,
+      "sequence": "B",
+      "generation": 1,
+      "start_tick": 0,
+      "done_tick": 4,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "F2-A",
+      "frame": 2,
+      "sequence": "A",
+      "generation": 2,
+      "start_tick": 1,
+      "done_tick": 4,
+      "slots": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "F2-B",
+      "frame": 2,
+      "sequence": "B",
+      "generation": 2,
+      "start_tick": 1,
+      "done_tick": 5,
+      "slots": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "F3-A",
+      "frame": 3,
+      "sequence": "A",
+      "generation": 3,
+      "start_tick": 4,
+      "done_tick": 6,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "F3-B",
+      "frame": 3,
+      "sequence": "B",
+      "generation": 3,
+      "start_tick": 4,
+      "done_tick": 7,
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "references": [
+    {
+      "query": "F1-A",
+      "generation": 1,
+      "acquired_at": 0,
+      "released_at": 3
+    },
+    {
+      "query": "F1-B",
+      "generation": 1,
+      "acquired_at": 0,
+      "released_at": 4
+    },
+    {
+      "query": "F2-A",
+      "generation": 2,
+      "acquired_at": 1,
+      "released_at": 4
+    },
+    {
+      "query": "F2-B",
+      "generation": 2,
+      "acquired_at": 1,
+      "released_at": 5
+    },
+    {
+      "query": "F3-A",
+      "generation": 3,
+      "acquired_at": 4,
+      "released_at": 6
+    },
+    {
+      "query": "F3-B",
+      "generation": 3,
+      "acquired_at": 4,
+      "released_at": 7
+    }
+  ],
+  "reuse_events": [
+    {
+      "slot": 0,
+      "from_generation": 1,
+      "to_generation": 3,
+      "wait_start": 3,
+      "reused_at": 4,
+      "last_from_ref_done": 4,
+      "active_refs_at_reuse": 0
+    },
+    {
+      "slot": 1,
+      "from_generation": 1,
+      "to_generation": 3,
+      "wait_start": 3,
+      "reused_at": 4,
+      "last_from_ref_done": 4,
+      "active_refs_at_reuse": 0
+    },
+    {
+      "slot": 2,
+      "from_generation": 1,
+      "to_generation": 3,
+      "wait_start": 3,
+      "reused_at": 4,
+      "last_from_ref_done": 4,
+      "active_refs_at_reuse": 0
+    },
+    {
+      "slot": 3,
+      "from_generation": 1,
+      "to_generation": 3,
+      "wait_start": 3,
+      "reused_at": 4,
+      "last_from_ref_done": 4,
+      "active_refs_at_reuse": 0
+    }
+  ],
+  "dangling_references": [],
+  "events": [
+    {
+      "tick": 0,
+      "kind": "build_requested",
+      "generation": 1,
+      "detail": "frame 1 requests a new generation"
+    },
+    {
+      "tick": 1,
+      "kind": "build_requested",
+      "generation": 2,
+      "detail": "frame 2 requests a new generation"
+    },
+    {
+      "tick": 3,
+      "kind": "build_requested",
+      "generation": 3,
+      "detail": "frame 3 requests a new generation"
+    },
+    {
+      "tick": 0,
+      "kind": "build_completed",
+      "generation": 1,
+      "detail": "slots [0 1 2 3]"
+    },
+    {
+      "tick": 0,
+      "kind": "ref_acquired",
+      "generation": 1,
+      "query": "F1-A"
+    },
+    {
+      "tick": 0,
+      "kind": "ref_acquired",
+      "generation": 1,
+      "query": "F1-B"
+    },
+    {
+      "tick": 1,
+      "kind": "generation_retired",
+      "generation": 1,
+      "detail": "queued with 2 active refs"
+    },
+    {
+      "tick": 1,
+      "kind": "build_completed",
+      "generation": 2,
+      "detail": "slots [4 5 6 7]"
+    },
+    {
+      "tick": 1,
+      "kind": "ref_acquired",
+      "generation": 2,
+      "query": "F2-A"
+    },
+    {
+      "tick": 1,
+      "kind": "ref_acquired",
+      "generation": 2,
+      "query": "F2-B"
+    },
+    {
+      "tick": 3,
+      "kind": "ref_released",
+      "generation": 1,
+      "query": "F1-A",
+      "detail": "active refs 1"
+    },
+    {
+      "tick": 3,
+      "kind": "generation_retired",
+      "generation": 2,
+      "detail": "queued with 2 active refs"
+    },
+    {
+      "tick": 3,
+      "kind": "build_blocked",
+      "generation": 3,
+      "detail": "need 4 free slots, have 0"
+    },
+    {
+      "tick": 4,
+      "kind": "ref_released",
+      "generation": 1,
+      "query": "F1-B",
+      "detail": "active refs 0"
+    },
+    {
+      "tick": 4,
+      "kind": "generation_released",
+      "generation": 1,
+      "detail": "returned slots [0 1 2 3] after last ref t4"
+    },
+    {
+      "tick": 4,
+      "kind": "ref_released",
+      "generation": 2,
+      "query": "F2-A",
+      "detail": "active refs 1"
+    },
+    {
+      "tick": 4,
+      "kind": "slot_reused",
+      "generation": 3,
+      "from_generation": 1,
+      "slot": 0,
+      "detail": "last ref done t4, active refs at reuse 0"
+    },
+    {
+      "tick": 4,
+      "kind": "slot_reused",
+      "generation": 3,
+      "from_generation": 1,
+      "slot": 1,
+      "detail": "last ref done t4, active refs at reuse 0"
+    },
+    {
+      "tick": 4,
+      "kind": "slot_reused",
+      "generation": 3,
+      "from_generation": 1,
+      "slot": 2,
+      "detail": "last ref done t4, active refs at reuse 0"
+    },
+    {
+      "tick": 4,
+      "kind": "slot_reused",
+      "generation": 3,
+      "from_generation": 1,
+      "slot": 3,
+      "detail": "last ref done t4, active refs at reuse 0"
+    },
+    {
+      "tick": 4,
+      "kind": "build_completed",
+      "generation": 3,
+      "detail": "slots [0 1 2 3]"
+    },
+    {
+      "tick": 4,
+      "kind": "ref_acquired",
+      "generation": 3,
+      "query": "F3-A"
+    },
+    {
+      "tick": 4,
+      "kind": "ref_acquired",
+      "generation": 3,
+      "query": "F3-B"
+    },
+    {
+      "tick": 5,
+      "kind": "ref_released",
+      "generation": 2,
+      "query": "F2-B",
+      "detail": "active refs 0"
+    },
+    {
+      "tick": 5,
+      "kind": "generation_released",
+      "generation": 2,
+      "detail": "returned slots [4 5 6 7] after last ref t5"
+    },
+    {
+      "tick": 6,
+      "kind": "ref_released",
+      "generation": 3,
+      "query": "F3-A",
+      "detail": "active refs 1"
+    },
+    {
+      "tick": 7,
+      "kind": "ref_released",
+      "generation": 3,
+      "query": "F3-B",
+      "detail": "active refs 0"
+    },
+    {
+      "tick": 8,
+      "kind": "generation_retired",
+      "generation": 3,
+      "detail": "queued with 0 active refs"
+    },
+    {
+      "tick": 8,
+      "kind": "generation_released",
+      "generation": 3,
+      "detail": "returned slots [0 1 2 3] after last ref t7"
+    }
+  ],
+  "metrics": {
+    "frames_rendered": 3,
+    "ghost_pixels": 0,
+    "dangling_refs": 0,
+    "premature_releases": 0,
+    "reuse_events": 4,
+    "safe_reuse_events": 4,
+    "builds_overlapped_with_queries": 2
+  }
+}
