@@ -1,0 +1,275 @@
+{
+  "width": 720,
+  "height": 450,
+  "outputs": {
+    "broken_hit_groups": "out/broken_hit_groups.png",
+    "broken_material_index": "out/broken_material_index.png",
+    "broken_shaded": "out/broken_shaded.png",
+    "hit_groups": "out/hit_groups.png",
+    "mapping_diff": "out/mapping_diff.png",
+    "material_index": "out/material_index.png",
+    "report": "out/report.json",
+    "shaded": "out/shaded.png"
+  },
+  "reference_object_mappings": [
+    {
+      "object_id": 1,
+      "object_name": "floor",
+      "hit_group_id": 3,
+      "hit_group_name": "floor",
+      "material_id": 3,
+      "material_index": 3,
+      "material_name": "sandstone_tiles"
+    },
+    {
+      "object_id": 2,
+      "object_name": "back_stone_wall",
+      "hit_group_id": 1,
+      "hit_group_name": "stone",
+      "material_id": 1,
+      "material_index": 1,
+      "material_name": "rough_stone"
+    },
+    {
+      "object_id": 3,
+      "object_name": "left_stone_wall",
+      "hit_group_id": 1,
+      "hit_group_name": "stone",
+      "material_id": 1,
+      "material_index": 1,
+      "material_name": "rough_stone"
+    },
+    {
+      "object_id": 4,
+      "object_name": "glass_panel",
+      "hit_group_id": 2,
+      "hit_group_name": "glass",
+      "material_id": 2,
+      "material_index": 2,
+      "material_name": "clear_glass"
+    },
+    {
+      "object_id": 5,
+      "object_name": "wall_area_light",
+      "hit_group_id": 6,
+      "hit_group_name": "area_light",
+      "material_id": 6,
+      "material_index": 6,
+      "material_name": "warm_light"
+    },
+    {
+      "object_id": 6,
+      "object_name": "ceramic_sphere",
+      "hit_group_id": 4,
+      "hit_group_name": "ceramic",
+      "material_id": 4,
+      "material_index": 4,
+      "material_name": "orange_ceramic"
+    },
+    {
+      "object_id": 7,
+      "object_name": "metal_sphere",
+      "hit_group_id": 5,
+      "hit_group_name": "metal",
+      "material_id": 5,
+      "material_index": 5,
+      "material_name": "brushed_metal"
+    },
+    {
+      "object_id": 8,
+      "object_name": "stone_plinth",
+      "hit_group_id": 1,
+      "hit_group_name": "stone",
+      "material_id": 1,
+      "material_index": 1,
+      "material_name": "rough_stone"
+    }
+  ],
+  "broken_object_mappings": [
+    {
+      "object_id": 1,
+      "object_name": "floor",
+      "hit_group_id": 3,
+      "hit_group_name": "floor",
+      "material_id": 3,
+      "material_index": 3,
+      "material_name": "sandstone_tiles"
+    },
+    {
+      "object_id": 2,
+      "object_name": "back_stone_wall",
+      "hit_group_id": 2,
+      "hit_group_name": "glass",
+      "material_id": 2,
+      "material_index": 2,
+      "material_name": "clear_glass"
+    },
+    {
+      "object_id": 3,
+      "object_name": "left_stone_wall",
+      "hit_group_id": 1,
+      "hit_group_name": "stone",
+      "material_id": 1,
+      "material_index": 1,
+      "material_name": "rough_stone"
+    },
+    {
+      "object_id": 4,
+      "object_name": "glass_panel",
+      "hit_group_id": 2,
+      "hit_group_name": "glass",
+      "material_id": 2,
+      "material_index": 2,
+      "material_name": "clear_glass"
+    },
+    {
+      "object_id": 5,
+      "object_name": "wall_area_light",
+      "hit_group_id": 6,
+      "hit_group_name": "area_light",
+      "material_id": 6,
+      "material_index": 6,
+      "material_name": "warm_light"
+    },
+    {
+      "object_id": 6,
+      "object_name": "ceramic_sphere",
+      "hit_group_id": 4,
+      "hit_group_name": "ceramic",
+      "material_id": 4,
+      "material_index": 4,
+      "material_name": "orange_ceramic"
+    },
+    {
+      "object_id": 7,
+      "object_name": "metal_sphere",
+      "hit_group_id": 5,
+      "hit_group_name": "metal",
+      "material_id": 5,
+      "material_index": 5,
+      "material_name": "brushed_metal"
+    },
+    {
+      "object_id": 8,
+      "object_name": "stone_plinth",
+      "hit_group_id": 1,
+      "hit_group_name": "stone",
+      "material_id": 1,
+      "material_index": 1,
+      "material_name": "rough_stone"
+    }
+  ],
+  "hit_groups": [
+    {
+      "id": 1,
+      "name": "stone",
+      "material_id": 1,
+      "material_index": 1,
+      "palette_color": "#b76842"
+    },
+    {
+      "id": 2,
+      "name": "glass",
+      "material_id": 2,
+      "material_index": 2,
+      "palette_color": "#1eb9e0"
+    },
+    {
+      "id": 3,
+      "name": "floor",
+      "material_id": 3,
+      "material_index": 3,
+      "palette_color": "#57aa5c"
+    },
+    {
+      "id": 4,
+      "name": "ceramic",
+      "material_id": 4,
+      "material_index": 4,
+      "palette_color": "#e33d9e"
+    },
+    {
+      "id": 5,
+      "name": "metal",
+      "material_id": 5,
+      "material_index": 5,
+      "palette_color": "#5b75e4"
+    },
+    {
+      "id": 6,
+      "name": "area_light",
+      "material_id": 6,
+      "material_index": 6,
+      "palette_color": "#fae240"
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "index": 1,
+      "name": "rough_stone",
+      "palette_color": "#968873"
+    },
+    {
+      "id": 2,
+      "index": 2,
+      "name": "clear_glass",
+      "palette_color": "#43b5e0"
+    },
+    {
+      "id": 3,
+      "index": 3,
+      "name": "sandstone_tiles",
+      "palette_color": "#c6a669"
+    },
+    {
+      "id": 4,
+      "index": 4,
+      "name": "orange_ceramic",
+      "palette_color": "#e84b2e"
+    },
+    {
+      "id": 5,
+      "index": 5,
+      "name": "brushed_metal",
+      "palette_color": "#a0b0c7"
+    },
+    {
+      "id": 6,
+      "index": 6,
+      "name": "warm_light",
+      "palette_color": "#ffda5d"
+    }
+  ],
+  "deliberate_changes": [
+    {
+      "object_id": 2,
+      "object_name": "back_stone_wall",
+      "correct_hit_group": 1,
+      "broken_hit_group": 2,
+      "correct_hit_group_name": "stone",
+      "broken_hit_group_name": "glass"
+    }
+  ],
+  "first_error": {
+    "found": true,
+    "x": 692,
+    "y": 16,
+    "object_id": 2,
+    "object_name": "back_stone_wall",
+    "expected_hit_group_id": 1,
+    "expected_hit_group": "stone",
+    "actual_hit_group_id": 2,
+    "actual_hit_group": "glass",
+    "expected_material_id": 1,
+    "actual_material_id": 2,
+    "difference": [
+      "hit_group",
+      "material_index",
+      "shaded_color"
+    ],
+    "expected_shaded_color": "#34322f",
+    "actual_shaded_color": "#5c5e62"
+  },
+  "first_error_summary": "first mismatch at (692,16): object #2 \"back_stone_wall\", expected hit group #1 \"stone\", got #2 \"glass\" ([hit_group material_index shaded_color])"
+}
