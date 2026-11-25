@@ -1,0 +1,259 @@
+{
+  "title": "自定时序时间样本读取与重定时",
+  "primary_id": "hero",
+  "nodes": [
+    {
+      "id": "beacon",
+      "kind": "beacon",
+      "bind_pose": {
+        "off_y": 0,
+        "lean": 0,
+        "arm_l": 0,
+        "arm_r": 0,
+        "elbow_l": 0,
+        "elbow_r": 0,
+        "leg_l": 0,
+        "leg_r": 0,
+        "knee_l": 0,
+        "knee_r": 0
+      }
+    },
+    {
+      "id": "hero",
+      "kind": "hero",
+      "samples": [
+        {
+          "time": 0.25,
+          "name": "IDLE",
+          "pose": {
+            "off_y": 0,
+            "lean": 0,
+            "arm_l": -19,
+            "arm_r": 19,
+            "elbow_l": -10,
+            "elbow_r": 10,
+            "leg_l": -11,
+            "leg_r": 11,
+            "knee_l": 4,
+            "knee_r": -4
+          }
+        },
+        {
+          "time": 0.38,
+          "name": "WAVE_PEAK",
+          "signature": true,
+          "pose": {
+            "off_y": 2,
+            "lean": -4,
+            "arm_l": -16,
+            "arm_r": 118,
+            "elbow_l": -10,
+            "elbow_r": 42,
+            "leg_l": -8,
+            "leg_r": 10,
+            "knee_l": 4,
+            "knee_r": -6
+          }
+        },
+        {
+          "time": 0.44,
+          "name": "WAVE_SETTLE",
+          "pose": {
+            "off_y": 0,
+            "lean": -2,
+            "arm_l": -12,
+            "arm_r": 74,
+            "elbow_l": -6,
+            "elbow_r": -24,
+            "leg_l": -7,
+            "leg_r": 8,
+            "knee_l": 3,
+            "knee_r": -4
+          }
+        },
+        {
+          "time": 0.62,
+          "name": "POINT",
+          "pose": {
+            "off_y": 0,
+            "lean": 5,
+            "arm_l": -20,
+            "arm_r": 84,
+            "elbow_l": -10,
+            "elbow_r": 4,
+            "leg_l": -10,
+            "leg_r": 12,
+            "knee_l": 4,
+            "knee_r": -5
+          }
+        },
+        {
+          "time": 0.82,
+          "name": "CROUCH",
+          "pose": {
+            "off_y": -24,
+            "lean": 6,
+            "arm_l": -52,
+            "arm_r": 58,
+            "elbow_l": -30,
+            "elbow_r": 26,
+            "leg_l": -72,
+            "leg_r": 72,
+            "knee_l": 84,
+            "knee_r": -84
+          }
+        },
+        {
+          "time": 0.95,
+          "name": "JUMP_ANTIC",
+          "pose": {
+            "off_y": -12,
+            "lean": 4,
+            "arm_l": -42,
+            "arm_r": 46,
+            "elbow_l": -14,
+            "elbow_r": 14,
+            "leg_l": -46,
+            "leg_r": 48,
+            "knee_l": 52,
+            "knee_r": -54
+          }
+        },
+        {
+          "time": 1.04,
+          "name": "JUMP_PEAK",
+          "signature": true,
+          "pose": {
+            "off_y": 34,
+            "lean": 0,
+            "arm_l": -152,
+            "arm_r": 152,
+            "elbow_l": 18,
+            "elbow_r": -18,
+            "leg_l": -34,
+            "leg_r": 30,
+            "knee_l": 46,
+            "knee_r": -42
+          }
+        },
+        {
+          "time": 1.1,
+          "name": "TUCK",
+          "pose": {
+            "off_y": 16,
+            "lean": 4,
+            "arm_l": -96,
+            "arm_r": 104,
+            "elbow_l": 24,
+            "elbow_r": -24,
+            "leg_l": -58,
+            "leg_r": 64,
+            "knee_l": 78,
+            "knee_r": -84
+          }
+        },
+        {
+          "time": 1.28,
+          "name": "KICK",
+          "pose": {
+            "off_y": 2,
+            "lean": -8,
+            "arm_l": -78,
+            "arm_r": 42,
+            "elbow_l": 18,
+            "elbow_r": -10,
+            "leg_l": -6,
+            "leg_r": 82,
+            "knee_l": 4,
+            "knee_r": -18
+          }
+        },
+        {
+          "time": 1.5,
+          "name": "LAND",
+          "pose": {
+            "off_y": -20,
+            "lean": 8,
+            "arm_l": -40,
+            "arm_r": 44,
+            "elbow_l": -20,
+            "elbow_r": 22,
+            "leg_l": -30,
+            "leg_r": 34,
+            "knee_l": 48,
+            "knee_r": -52
+          }
+        }
+      ]
+    },
+    {
+      "id": "buddy",
+      "kind": "buddy",
+      "bind_pose": {
+        "off_y": 0,
+        "lean": -5,
+        "arm_l": -18,
+        "arm_r": 22,
+        "elbow_l": 0,
+        "elbow_r": 0,
+        "leg_l": 0,
+        "leg_r": 0,
+        "knee_l": 0,
+        "knee_r": 0
+      }
+    }
+  ],
+  "sheets": [
+    {
+      "id": "01_normal_speed",
+      "title": "NORMAL 1X / 6FPS / STEP-HOLD",
+      "cn_title": "原速 1x · 6fps · 整帧保持",
+      "blurb": "frame clock runs at source rate; clustered keys are skipped",
+      "playback_fps": 6,
+      "frame_count": 12,
+      "start_time": 0,
+      "retime": {
+        "rate": 1,
+        "offset": 0
+      },
+      "read_mode": "step_hold",
+      "cols": 4,
+      "cell_w": 320,
+      "cell_h": 336
+    },
+    {
+      "id": "02_slow_motion",
+      "title": "SLOW MOTION 0.5X / RETIMED CLOCK / STEP",
+      "cn_title": "慢放 0.5x · 重定时",
+      "blurb": "retime halves source advance per frame, so every key is caught",
+      "playback_fps": 6,
+      "frame_count": 21,
+      "start_time": 0,
+      "retime": {
+        "rate": 0.5,
+        "offset": 0
+      },
+      "read_mode": "step_hold",
+      "cols": 7,
+      "cell_w": 320,
+      "cell_h": 336
+    },
+    {
+      "id": "03_interpolation",
+      "title": "INTERPOLATION 1X / 6FPS / LINEAR BRACKET",
+      "cn_title": "插值 1x · 线性插值",
+      "blurb": "same frame grid, but poses interpolate instead of popping",
+      "playback_fps": 6,
+      "frame_count": 12,
+      "start_time": 0,
+      "retime": {
+        "rate": 1,
+        "offset": 0
+      },
+      "read_mode": "linear",
+      "cols": 4,
+      "cell_w": 320,
+      "cell_h": 336
+    }
+  ]
+}
