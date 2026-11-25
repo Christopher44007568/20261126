@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>TEXPATH — 贴图搜索与回退</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="TEXPATH 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>TEXPATH</strong>
+          <small>Texture Resolver</small>
+        </span>
+      </a>
+      <div class="topbar-meta">
+        <span class="live-pill"><i></i>LOCAL RUN</span>
+        <span class="tech-pill">GO STD LIB</span>
+        <span class="tech-pill">0 DEPS</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span>DETERMINISTIC ASSET LOOKUP</div>
+          <h1>缺失纹理，<br><em>不再黑屏。</em></h1>
+          <p class="hero-lead">按 <b>本地资产 → 运行时缓存 → 最终回退</b> 逐级解析。缺失槽位切换为棋盘格占位，场景光照、背景与其他材质保持完整。</p>
+        </div>
+        <div class="hero-metrics" id="hero-metrics" aria-label="解析统计">
+          <div class="metric-skeleton"></div>
+          <div class="metric-skeleton"></div>
+          <div class="metric-skeleton"></div>
+        </div>
+      </section>
+
+      <section class="order-section" aria-labelledby="order-title">
+        <div class="section-heading compact">
+          <div>
+            <span class="section-index">01</span>
+            <h2 id="order-title">搜索顺序</h2>
+          </div>
+          <p>高优先级路径先命中；只要找到文件就停止，但仍记录后续同名候选。</p>
+        </div>
+        <div class="order-rail" id="order-rail"></div>
+      </section>
+
+      <section class="workspace">
+        <article class="scene-card">
+          <header class="card-head scene-head">
+            <div>
+              <span class="card-kicker">MATERIAL LAB / LIVE PREVIEW</span>
+              <h2>材质场景</h2>
+            </div>
+            <div class="scene-controls" aria-label="场景状态">
+              <span class="control-chip"><i class="dot amber"></i>2 占位槽位</span>
+              <span class="control-chip">光照正常</span>
+            </div>
+          </header>
+          <div class="scene-frame">
+            <canvas id="scene-canvas" aria-label="包含三种材质立方体的实时场景预览"></canvas>
+            <div class="scene-overlay top-left">
+              <span>SCENE_04</span>
+              <span>STUDIO / 35°</span>
+            </div>
+            <div class="scene-overlay bottom-right">
+              <span class="scene-live"><i></i>CHECKER FALLBACK ON</span>
+            </div>
+            <div class="scene-caption">
+              <span id="scene-caption-title">正在载入解析结果</span>
+              <span id="scene-caption-sub">9 个贴图槽位</span>
+            </div>
+          </div>
+          <footer class="scene-foot">
+            <div class="legend">
+              <span><i style="--tone:#d9a25f"></i>烟熏橡木</span>
+              <span><i style="--tone:#8ec5ad"></i>拉丝黄铜</span>
+              <span><i class="checker-key"></i>手作陶土 / 占位</span>
+            </div>
+            <p>缺失材质不会中断渲染。</p>
+          </footer>
+        </article>
+
+        <aside class="overview-column" aria-labelledby="overview-title">
+          <div class="section-heading side">
+            <div>
+              <span class="section-index">02</span>
+              <h2 id="overview-title">三组状态总览</h2>
+            </div>
+            <p>按最终采用来源聚合</p>
+          </div>
+          <div class="status-stack" id="status-stack"></div>
+          <div class="policy-card">
+            <div class="policy-icon" aria-hidden="true">↳</div>
+            <div>
+              <strong>最终回退策略</strong>
+              <p>文件探测失败时使用程序生成的棋盘格，不写入黑色纹理，也不影响场景其余部分。</p>
+              <code>procedural://checkerboard</code>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="inventory-section" aria-labelledby="inventory-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">03</span>
+            <h2 id="inventory-title">贴图状态明细</h2>
+          </div>
+          <div class="inventory-actions">
+            <span class="legend-note">点击任意槽位查看完整搜索轨迹</span>
+            <button class="filter-button is-active" data-filter="all">全部</button>
+            <button class="filter-button" data-filter="conflict">同名冲突</button>
+            <button class="filter-button" data-filter="placeholder">占位</button>
+          </div>
+        </div>
+        <div class="materials" id="materials"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>TEXPATH / LOCAL ASSET PIPELINE</span>
+      <span>搜索顺序由 <code>texturepaths.json</code> 配置 · Go 标准库实现</span>
+      <span id="generated-at">—</span>
+    </footer>
+  </div>
+
+  <div class="inspector" id="inspector" aria-hidden="true">
+    <div class="inspector-backdrop" data-close-inspector></div>
+    <aside class="inspector-panel" role="dialog" aria-modal="true" aria-labelledby="inspector-title">
+      <button class="inspector-close" type="button" data-close-inspector aria-label="关闭详情">×</button>
+      <div class="inspector-content" id="inspector-content"></div>
+    </aside>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

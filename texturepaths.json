@@ -1,0 +1,25 @@
+{
+  "searchOrder": [
+    {
+      "id": "assets",
+      "label": "本地资产",
+      "kind": "asset",
+      "path": "assets/textures",
+      "priority": 1
+    },
+    {
+      "id": "cache",
+      "label": "运行时缓存",
+      "kind": "cache",
+      "path": ".cache/textures",
+      "priority": 2
+    },
+    {
+      "id": "fallback",
+      "label": "最终回退",
+      "kind": "fallback",
+      "path": "assets/fallback",
+      "priority": 3
+    }
+  ]
+}
