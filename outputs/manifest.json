@@ -1,0 +1,30 @@
+{
+  "scene_name": "same-version-contact-study",
+  "scene_version": "818e69d4c7ee519d",
+  "scene_hash": "818e69d4c7ee519d3295a7f0229bea0819b70b3453e150e9a275e7501e255c47",
+  "width": 320,
+  "height": 240,
+  "depth_near": 2.1,
+  "depth_far": 8.5,
+  "depth_encoding": "uint8 grayscale; white=near, black=far-or-miss; metric normalization uses depth_near/depth_far",
+  "shadow_encoding": "uint8 grayscale; product of key-light any-hit visibility and deterministic hemisphere AO; white=visible, black=blocked",
+  "files": {
+    "anyhit": "anyhit_shadow.png",
+    "composite": "composite.png",
+    "depth": "depth.png"
+  },
+  "sha256": {
+    "anyhit_shadow.png": "ba63103546430ac7ecb9facaaba7137d3284f0f9781488921add2d277162b50b",
+    "composite.png": "a5e5020444d4ac5ff5edea0a0b7f072e5fe4e487d0d335827e72c3944f714456",
+    "depth.png": "79e0aba4b40558e785fa37616362e7d4686ed1fcdcfc0c2f8e3d7b1b678eddad"
+  },
+  "ray_stats": {
+    "pixels": 76800,
+    "primary_queries": 76800,
+    "primary_hits": 75381,
+    "key_shadow_queries": 75116,
+    "key_shadow_any_hits": 278,
+    "ambient_queries": 3618288,
+    "ambient_any_hits": 534547
+  }
+}
