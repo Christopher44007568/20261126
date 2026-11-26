@@ -1,0 +1,55 @@
+{
+  "name": "valid",
+  "accepted": true,
+  "overriddenProperties": [
+    {
+      "meshId": "badge",
+      "properties": [
+        {
+          "property": "color",
+          "path": "meshes.badge.material.color",
+          "before": {
+            "r": 0.95,
+            "g": 0.55,
+            "b": 0.2
+          },
+          "after": {
+            "r": 0.1,
+            "g": 0.8,
+            "b": 0.45
+          }
+        },
+        {
+          "property": "opacity",
+          "path": "meshes.badge.material.opacity",
+          "before": 0.85,
+          "after": 0.4
+        }
+      ]
+    },
+    {
+      "meshId": "flag",
+      "properties": [
+        {
+          "property": "color",
+          "path": "meshes.flag.material.color",
+          "before": {
+            "r": 0.85,
+            "g": 0.25,
+            "b": 0.35
+          },
+          "after": {
+            "r": 0.4,
+            "g": 0.2,
+            "b": 0.9
+          }
+        }
+      ]
+    }
+  ],
+  "images": {
+    "base": "out/valid/base.png",
+    "over": "out/valid/over.png",
+    "final": "out/valid/final.png"
+  }
+}

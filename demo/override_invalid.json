@@ -1,0 +1,29 @@
+{
+  "patches": [
+    {
+      "meshId": "badge",
+      "path": "meshes.badge.material.opacity",
+      "value": 0.55
+    },
+    {
+      "meshId": "ghost",
+      "path": "meshes.ghost.material.color",
+      "value": { "r": 1, "g": 0, "b": 0 }
+    },
+    {
+      "meshId": "panel",
+      "path": "meshes.panel.geometry.x",
+      "value": 99
+    },
+    {
+      "meshId": "panel",
+      "path": "meshes.panel.material.color",
+      "value": { "r": 2.5, "g": 0, "b": 0 }
+    },
+    {
+      "meshId": "flag",
+      "path": "meshes.flag.material.opacity",
+      "value": "semi-transparent"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "name": "valid",
+      "accepted": true,
+      "overriddenProperties": [
+        {
+          "meshId": "badge",
+          "properties": [
+            {
+              "property": "color",
+              "path": "meshes.badge.material.color",
+              "before": {
+                "r": 0.95,
+                "g": 0.55,
+                "b": 0.2
+              },
+              "after": {
+                "r": 0.1,
+                "g": 0.8,
+                "b": 0.45
+              }
+            },
+            {
+              "property": "opacity",
+              "path": "meshes.badge.material.opacity",
+              "before": 0.85,
+              "after": 0.4
+            }
+          ]
+        },
+        {
+          "meshId": "flag",
+          "properties": [
+            {
+              "property": "color",
+              "path": "meshes.flag.material.color",
+              "before": {
+                "r": 0.85,
+                "g": 0.25,
+                "b": 0.35
+              },
+              "after": {
+                "r": 0.4,
+                "g": 0.2,
+                "b": 0.9
+              }
+            }
+          ]
+        }
+      ],
+      "images": {
+        "base": "out/valid/base.png",
+        "over": "out/valid/over.png",
+        "final": "out/valid/final.png"
+      }
+    },
+    {
+      "name": "invalid",
+      "accepted": false,
+      "error": "override rejected atomically (4 problem(s)):\n  - patch 1 rejected: target path \"meshes.ghost.material.color\": mesh \"ghost\" does not exist in the original asset\n  - patch 2 rejected: target path \"meshes.panel.geometry.x\": only material property overrides are allowed (allowed: meshes.\u003cid\u003e.material.color, meshes.\u003cid\u003e.material.opacity)\n  - patch 3 rejected: property \"color\": channel r must be in [0,1], got 2.5\n  - patch 4 rejected: property \"opacity\" requires a number: json: cannot unmarshal string into Go value of type float64",
+      "images": {
+        "base": "out/invalid/base.png",
+        "over": "out/invalid/over.png",
+        "final": "out/invalid/final.png"
+      },
+      "basePreserved": true
+    }
+  ]
+}
