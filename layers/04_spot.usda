@@ -1,0 +1,20 @@
+#usda 1.0
+(
+    defaultPrim = "Stage"
+    layerId = "L4-spot"
+    layerStrength = 40
+)
+
+# Strongest layer. Local over statements only add opinions to existing paths.
+over Xform "Stage" {
+    over Mesh "PanelC" {
+        color3f inputs:displayColor = (0.98, 0.8, 0.18)
+        over Sphere "Badge" {
+            color3f inputs:displayColor = (1, 0.96, 0.82)
+        }
+    }
+
+    over Mesh "StackProbe" {
+        color3f inputs:displayColor = (0.96, 0.33, 0.7)
+    }
+}

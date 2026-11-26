@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    defaultPrim = "Stage"
+    layerId = "L3-cool"
+    layerStrength = 30
+)
+
+# Cool layer. The nested over under PanelA proves that path composition is
+# relative: it targets /Stage/PanelA/Knob and not a relocated child node.
+over Xform "Stage" {
+    over Mesh "PanelA" {
+        over Sphere "Knob" {
+            color3f inputs:displayColor = (0.3, 0.92, 0.88)
+        }
+    }
+
+    over Mesh "PanelB" {
+        color3f inputs:displayColor = (0.1, 0.76, 0.66)
+    }
+
+    over Mesh "PanelC" {
+        color3f inputs:displayColor = (0.2, 0.45, 0.92)
+    }
+
+    over Mesh "StackProbe" {
+        color3f inputs:displayColor = (0.36, 0.34, 0.92)
+    }
+}
