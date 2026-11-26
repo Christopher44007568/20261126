@@ -1,0 +1,7 @@
+{
+  "kind": "scene",
+  "name": "Showroom / Referenced",
+  "references": {
+    "model": "../models/live.json"
+  }
+}

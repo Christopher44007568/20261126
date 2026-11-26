@@ -1,0 +1,8 @@
+# compiled binaries
+/refproof
+*.exe
+*.test
+*.out
+
+# local scratch
+/tmp/

@@ -1,0 +1,9 @@
+{
+  "kind": "model",
+  "name": "Orbit Display",
+  "references": {
+    "material": "../materials/live.json",
+    "geometry": "../geometry/showcase.json",
+    "camera": "../cameras/hero.json"
+  }
+}

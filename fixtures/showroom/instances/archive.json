@@ -1,0 +1,7 @@
+{
+  "kind": "scene",
+  "name": "Showroom / Independent Copy",
+  "references": {
+    "model": "../models/archive.json"
+  }
+}
